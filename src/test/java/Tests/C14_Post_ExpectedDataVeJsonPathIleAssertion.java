@@ -1,3 +1,5 @@
+package Tests;
+
 import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
@@ -84,11 +86,11 @@ public class C14_Post_ExpectedDataVeJsonPathIleAssertion {
         // ilk yazilan expected ====> olusturdugumuz JSonObject : expectedData
         // ikinci yazilan actual ===> response : responseJsonPath
         assertEquals(expectedData.getJSONObject("booking").get("firstname"),
-                    responseJsonPath.get("booking.firstname"));
+                responseJsonPath.get("booking.firstname"));
         assertEquals(expectedData.getJSONObject("booking").get("lastname"),
                     responseJsonPath.get("booking.lastname"));
         assertEquals(expectedData.getJSONObject("booking").get("totalprice"),
-                    responseJsonPath.get("booking.totalprice"));
+                responseJsonPath.get("booking.totalprice"));
         assertEquals(expectedData.getJSONObject("booking").get("depositpaid"),
                     responseJsonPath.get("booking.depositpaid"));
         assertEquals(expectedData.getJSONObject("booking").get("additionalneeds"),
